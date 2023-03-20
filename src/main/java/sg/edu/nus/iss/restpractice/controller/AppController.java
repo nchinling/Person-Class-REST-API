@@ -48,6 +48,7 @@ public class AppController implements Serializable {
         // return new ResponseEntity<>("Person saved successfully!", HttpStatus.OK);
     }
 
+    //using path variable approach.
     @GetMapping(path="{userId}")
     public ResponseEntity<String> getUser(@PathVariable(name="userId") String userId) throws IOException{
         Optional<Person> person = personService.findById(userId);
